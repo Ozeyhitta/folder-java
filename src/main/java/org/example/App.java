@@ -31,7 +31,7 @@ public class App {
             System.out.println("7. xoa folder");
             System.out.println("8. xoa file");
             System.out.println("9. doi ten folder");
-            System.out.println("20. doi ten file");
+            System.out.println("10. doi ten file");
             System.out.println("type exit if you want to complete the project");
             System.out.println();
             str = br.readLine(); //dọc giá trị người dùng nhập vào từ bàn phím

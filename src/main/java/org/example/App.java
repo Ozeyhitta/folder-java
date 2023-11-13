@@ -17,6 +17,7 @@ public class App {
     public static Folder currentFolder = root; //tạo 1 biến currentFolder hiện tại là thư mục gốc
     //hàm main
     public static void main(String[] args) throws IOException {
+
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         //tạo 1 đối tượng BufferedReader đọc dữ liệu từ bàn phím
         String str = ""; //tạo 1 string str rỗng để lưu trữ thao tác mà người dùng nhập vào.
@@ -36,12 +37,8 @@ public class App {
             System.out.println();
             str = br.readLine(); //dọc giá trị người dùng nhập vào từ bàn phím
             switch (str) {
-                case "1" -> {
-                    createFolder(br, currentFolder); // gọi hàm tạo folder
-                }
-                case "2" -> {
-                    createFile(br, currentFolder); //gọi hàm tạo file
-                }
+                case "1" -> createFolder(br, currentFolder); // gọi hàm tạo folder
+                case "2" -> createFile(br, currentFolder); //gọi hàm tạo file
                 case "3" -> {
                     listFoldersAndFiles(currentFolder); // gọi hàm liệt kê folder và file
                 }

@@ -122,7 +122,7 @@ public class AppWithConsoleUi {
       System.out.println("Folder name cannot be blank");
     } else { //tien hành tạo folder mới
       Folder folder = new Folder(folderName); //
-      Objects.requireNonNullElse(actualFolder, root).getFolders().add(folder); //bỏ folder mới tạo vào list
+      Objects.requireNonNullElse(actualFolder, root).getFolders().insert(acfolder); //bỏ folder mới tạo vào list
     }
   }
 
@@ -236,10 +236,9 @@ public class AppWithConsoleUi {
         System.out.println("Folder name cannot be blank");
       } else {
         Folder folderToGo = currentFolder.getFolders()
-                .stream()
-                .filter(folder -> folder.getName().equals(folderName))
-                .findFirst()
-                .orElse(null);
+
+                .search(Folder )
+
 
         if (Objects.isNull(folderToGo)) { //nếu file rỗng
           System.out.println("Folder name not found");

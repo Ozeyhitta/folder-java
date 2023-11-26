@@ -39,4 +39,27 @@ public class Folder { //lop dai dien cho thu muc, chua folder con va file
     public void setFiles(List<File> files) {
         this.files = files;
     } //thiết lập giá trị file mới được nhập từ bàn phím
+
+    private String path;
+    public String getPath(){
+        return this.path;
+    }
+
+    private Folder parent; //lưu trữ tham chiếu đến folder cha.
+    //cho biết con trỏ đến folder hiện tại, hỗ trợ việc di chuyển lùi trong cấu trúc thư mục
+
+    //constructor cap nhat
+    public Folder(String name,Folder parent) {
+    this.name=name; //gan ten nhan duoc cho truong name cuar doi tuong
+        //dung de dat ten cho folder
+    this.parent=parent;//gan folder cha cho truong parent cua doi tuong
+    //dung de dat folder cha cua thư mục hiện tại
+
+    }
+
+    public Folder getParent(){
+        return this.parent; // tra ve thu muc cha cua thu muc hien tai
+        // neu thu muc nay la thu muc goc(root) thi tra ve null
+    }
+
 }
